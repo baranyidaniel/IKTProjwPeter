@@ -1,2 +1,2 @@
 # IKTProjwPeter
-# Deniel csinálj ide termékleírást
+# termékleítrás itt
