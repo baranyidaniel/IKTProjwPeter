@@ -1,6 +1,5 @@
 #menu{
     float: left;
-<<<<<<< HEAD
     background-color: grey;
     font-family: Arial;
     width: 600px;
@@ -21,9 +20,3 @@ ul{
     margin: 0;
     padding: 0;
 }
-=======
-}
-#content{
-    float: right;
-}
->>>>>>> 1623f8cdbd64bd3510596a3c6ba80922ee9f3f43
