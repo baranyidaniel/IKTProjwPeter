@@ -1,1 +1,22 @@
+#menu{
+    float: left;
+    background-color: grey;
+    font-family: Arial;
+    width: 600px;
+}
 
+#lotto{
+    width: 600px;
+}
+
+a{
+    text-decoration: white;
+    color: white;
+    background-color: grey;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
