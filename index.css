@@ -13,10 +13,16 @@ a{
     text-decoration: white;
     color: white;
     background-color: grey;
+    text-align: center;
 }
 
 ul{
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+li{
+    padding: 10px;
+    padding-left: 20px;
 }
