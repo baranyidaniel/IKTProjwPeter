@@ -1,1 +1,6 @@
-
+#menu{
+    float: left;
+}
+#content{
+    float: right;
+}
