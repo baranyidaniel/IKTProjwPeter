@@ -39,4 +39,7 @@ li{
 #content{
     float: right;
     background-color: white;
+    margin-right: 150px;
+    margin-left: 50px;
+    margin-top: 50px;
 }
