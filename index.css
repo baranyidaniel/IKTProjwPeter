@@ -26,3 +26,16 @@ li{
     padding: 10px;
     padding-left: 20px;
 }
+
+.line{
+    height: 1px;
+    background-color: #fff;
+    border-top: solid 1px #000;
+    opacity: 0.4;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+div{
+    background-color: grey;
+}
