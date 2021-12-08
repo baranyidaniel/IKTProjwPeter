@@ -39,4 +39,6 @@ li{
 #content{
     float: right;
     background-color: white;
+    margin-right: 100px;
+    margin-top: 50px;
 }
