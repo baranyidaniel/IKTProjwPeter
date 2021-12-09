@@ -13,8 +13,19 @@ for row in csvreader:
     rows.append(row)
 file.close()
 
-nyeroszamok = []
-for i in range(len)
+#nyeroszamok
+
+nyeroszamok1 = []
+nyeroszamok2 = []
+nyeroszamok3 = []
+
+for i in range(len(rows)):
+    nyeroszamok1.append(str(rows[i]).split(;)[-5:])
+
+for j in range(len(rows)):
+    nyeroszamok2.append(str(nyeroszamok1[j]).translate(target)))
+
+for k in range
 
 #multheti számok
 
