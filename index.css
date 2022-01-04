@@ -52,4 +52,9 @@ li{
     height: 400px;
     width: 600px;
 }
-
+#tortenetek{
+    float:right;
+    width: 600px;
+    padding-left: 5px;
+    padding-right: 15px;
+}
