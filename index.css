@@ -2,11 +2,13 @@
     float: left;
     background-color: grey;
     font-family: Arial;
-    width: 630px;
+    width: 600px;
+    display: block;
 }
 
 #lotto{
     width: 600px;
+    display: block;
 }
 
 a{
@@ -38,11 +40,10 @@ li{
 
 #content{
     float: right;
-    background-color: white;
-    
-    text-align: center;
-    
+    background-color: white;    
+    text-align: center;    
     width: 600px;
+    margin-top: 50px;
 }
 #content img{
     height: 100px;
