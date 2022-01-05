@@ -25,19 +25,202 @@ namespace index.cs
         static void Main(string[] args)
         {
             beolvas();
+            leggyakoribb();
+            leghasonlóbb();
+            leghosszabb_sorozat();
             legkisebb();
             Console.ReadKey();
         }
 
         private static void legkisebb()
         {
-            int[] legkisebb = new int[3500];
+            int[] legkisebb_sorozat=new int[5];
+            int[] masodik_legkisebb_sorozat=new int[5];
+            int[] harmadik_legkisebb_sorozat=new int[5];
+
+            int[] legkisebbek = new int[3];
+            int[] sor=new int[db];
+            int legkisebb = 8000;
+
+            
+                for (int j = 0; j < db; j++)
+                {
+                    for (int k = 0; k < 5; k++)
+                    {
+                        sor[j] += nyeroszamok[j, k];
+                       
+                    }
+                    
+                }
+
+            
+                for (int i = 0; i < db; i++)
+                {
+                    if (sor[i] < legkisebb)
+                    {
+                        legkisebb = sor[i];
+                    }
+                }
+            legkisebbek[0]= legkisebb;
+            legkisebb = 8000;
+            for (int i = 0; i < db; i++)
+            {
+                if (sor[i]<legkisebb&& sor[i]!=legkisebbek[0])
+                {
+                    legkisebb = sor[i];
+                }
+            }
+            legkisebbek[1] = legkisebb;
+            legkisebb = 8000;
 
             for (int i = 0; i < db; i++)
             {
-
+                if (sor[i] < legkisebb && sor[i] != legkisebbek[0] && sor[i] != legkisebbek[1])
+                {
+                    legkisebb = sor[i];
+                }
             }
+            legkisebbek[2] = legkisebb;
+
+            for (int i = 0; i < db; i++)
+            {
+                if (legkisebbek[0]==sor[i])
+                {
+                    for (int k = 0; k < 5; k++)
+                    {
+                        legkisebb_sorozat[k] = nyeroszamok[i, k];
+                    }
+                    
+                }
+            }
+            for (int i = 0; i < db; i++)
+            {
+                if (legkisebbek[1] == sor[i])
+                {
+                    for (int k = 0; k < 5; k++)
+                    {
+                        masodik_legkisebb_sorozat[k] = nyeroszamok[i, k];
+                    }
+
+                }
+            }
+            for (int i = 0; i < db; i++)
+            {
+                if (legkisebbek[2] == sor[i])
+                {
+                    for (int k = 0; k < 5; k++)
+                    {
+                        harmadik_legkisebb_sorozat[k] = nyeroszamok[i, k];
+                    }
+
+                }
+            }
+
+
+            Console.Write("Legkisebb összeg: "+legkisebbek[0]+" nyerőszámok:   ");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write(legkisebb_sorozat[i]+" ");
+            }
+            Console.WriteLine();
+            Console.Write("Második legkisebb összeg: " + legkisebbek[1] + " nyerőszámok:   ");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write(masodik_legkisebb_sorozat[i] + " ");
+            }
+            Console.WriteLine();
+
+            Console.Write("Harmadik legkisebb összeg: " + legkisebbek[2] + " nyerőszámok:   ");
+            for (int i = 0; i < 5; i++)
+            {
+                Console.Write(harmadik_legkisebb_sorozat[i] + " ");
+            }
+            Console.WriteLine();
         }
+
+
+private static void leghosszabb_sorozat()
+        {
+            
+        }
+
+        private static void leghasonlóbb()
+        {
+            
+        }
+
+ private static void leggyakoribb()
+        {
+            int szam=0;
+            int legtobb = 0;
+            int[] gyakoriszamok = new int[3];
+            int[] leggyakoribbak = new int[3];
+            int[] counter = new int[90];
+            int[] numbers = new int[90];
+            for (int i = 0; i < 90; i++)
+            {
+                counter[i] = 0;
+                numbers[i] = i+1;
+            }
+            for (int i = 0; i < db; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    for (int k = 0; k < 90; k++)
+                    {
+                        if (numbers[k]==nyeroszamok[i,j])
+                        {
+                            counter[k]++;
+                        }
+                    }
+                }
+            }
+
+            for (int i = 0; i < 90; i++)
+            {
+                if (counter[i]>legtobb)
+                {
+                    legtobb = counter[i];
+                    szam = numbers[i];
+                }
+            }
+            gyakoriszamok[0] = szam;
+            leggyakoribbak[0] = legtobb;
+            legtobb = 0;
+
+            for (int i = 0; i < 90; i++)
+            {
+                if (counter[i] > legtobb&&counter[i]!= leggyakoribbak[0])
+                {
+                    legtobb = counter[i];
+                    szam = numbers[i];
+                }
+            }
+            gyakoriszamok[1] = szam;
+            leggyakoribbak[1] = legtobb;
+            legtobb = 0;
+
+            for (int i = 0; i < 90; i++)
+            {
+                if (counter[i] > legtobb && counter[i] != leggyakoribbak[1] && counter[i] != leggyakoribbak[0])
+                {
+                    legtobb = counter[i];
+                    szam = numbers[i];
+                }
+            }
+            gyakoriszamok[2] = szam;
+            leggyakoribbak[2] = legtobb;
+            Console.WriteLine("Leggyakoribb szám: "+gyakoriszamok[0]+"  " +  leggyakoribbak[0]+"db");
+            Console.WriteLine("második Leggyakoribb szám: " + gyakoriszamok[1] + "  " + leggyakoribbak[1] + "db");
+            Console.WriteLine("harmadik Leggyakoribb szám: " + gyakoriszamok[2] + "  " + leggyakoribbak[2] + "db");
+
+
+
+
+
+        }
+
+
 
         private static void beolvas()
         {
