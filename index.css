@@ -2,7 +2,7 @@
     float: left;
     background-color: grey;
     font-family: Arial;
-    width: 600px;
+    width: 630px;
 }
 
 #lotto{
@@ -23,7 +23,7 @@ ul{
 }
 
 li{
-    padding: 10px;
+    padding: 5px;
     padding-left: 20px;
 }
 
