@@ -2,13 +2,12 @@
     float: left;
     background-color: grey;
     font-family: Arial;
-    width: 600px;
-    display: block;
+    width: 630px;
+    height: 100vh;
 }
 
-#lotto{
-    width: 560px;
-    display: block;
+.lotto{
+    width: 630px;
 }
 
 a{
@@ -64,3 +63,6 @@ li{
 top: 35px;
 }
 
+.kepecske{
+    padding: 0px;
+}
