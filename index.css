@@ -61,8 +61,12 @@ li{
 .gyakori_img{
     position: relative;
 top: 35px;
+padding-right: 20px;
 }
 
 .kepecske{
     padding: 0px;
+}
+#gyakoriak{
+    font-size: 1cm;
 }
