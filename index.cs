@@ -147,6 +147,79 @@ private static void leghosszabb_sorozat()
         private static void leghasonlóbb()
         {
             
+int[] check= new int[db];
+            int megallito = 0;
+            int[,] hasonlosag = new int[db,db];
+            int counter = 0;
+            int[] megnezendo = new int[5];
+
+            int[] megnezett = new int[5];
+            for (int i = 0; i < db; i++)
+            {
+                for (int k = 0; k < 5; k++)
+                {
+                    megnezendo[k] = nyeroszamok[i, k];
+                }
+                check[i] = 1;
+                for (int j = 0; j < db-1; j++)
+                {
+                    if (check[j]==1)
+                    {
+                        j++;
+                    }
+                    else
+                    {
+                        for (int h = 0; h < 5; h++)
+                        {
+                            megnezett[h] = nyeroszamok[j, h];
+                            if (megnezett[h] == megnezendo[h])
+                            {
+                                counter++;
+                            }
+                        }
+
+                        hasonlosag[i, j] = counter;
+                        counter = 0;
+                    }
+                    
+                }
+            }
+            Console.WriteLine(); Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
+            for (int i = 0; i < db; i++)
+            {
+                for (int j = 0; j < db; j++)
+                {
+                    if (megallito!=10)
+                    {
+
+
+                        if (hasonlosag[i, j] == 4)
+                        {
+
+
+                            for (int h = 0; h < 5; h++)
+                            {
+                                Console.Write(nyeroszamok[i, h] + " ");
+                                megallito++;
+                            }
+                            Console.WriteLine();
+                            for (int k = 0; k < 5; k++)
+                            {
+                                Console.Write(nyeroszamok[j, k] + " ");
+                                megallito++;
+                            }
+
+
+
+
+                        }
+                    }
+                }
+                
+            }
+            Console.WriteLine(); Console.WriteLine(); Console.WriteLine(); Console.WriteLine();
+
+
         }
 
  private static void leggyakoribb()
